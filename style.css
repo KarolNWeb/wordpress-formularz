@@ -1,0 +1,101 @@
+body{
+    background-color: gray;
+}
+
+input[type="radio"],[type="checkbox"]:empty ~ label{
+    cursor: pointer;
+}
+input[type="radio"],[type="checkbox"]{
+    background-color: transparent;
+    border: 0.01rem solid #fff !important;
+}
+input[type="radio"],[type="checkbox"]:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input[type="radio"],[type="checkbox"]:checked{
+    background: none !important;
+    color: none !important;
+}
+
+input[type="radio"]:checked::before,[type="checkbox"]:checked::before{
+    content: '✓';
+    color: #fff;
+    margin-top: -0.2rem;
+    margin-left: 0.1rem;
+    position: absolute;
+    font-size: 0.8rem;
+}
+
+textarea{
+    height: 20rem !important;
+    resize: none;
+}
+
+a,a:hover{
+    color: #fff;
+}
+
+.form-content{
+    color: white;
+    background-color: #333;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 999;
+}
+
+.form-control,.form-control:focus{
+    background-color: #444;
+    color: #fff;
+}
+
+.center{
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    bottom: 10%;
+    right: 10%;
+}
+
+.closeForm{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+
+.closeForm>img{
+    cursor: pointer;
+    width: 1.5rem;
+    filter:  brightness(0) invert(1);
+}
+.closeForm>img:hover{
+    filter:  brightness(0.5) invert(1);
+}
+
+.button1{
+    background: #222222;
+    color: #FFFFFF;
+    border: 2px solid #222222;
+    transition: 0.3s;
+}
+
+.button1:hover{
+    background: #FD9A17;
+    color: #222222;
+    box-shadow: 0 0 10px;
+}
+
+.button2{
+    background: #FFFFFF;
+    color: #222222;
+    border: 2px solid #222222;
+    transition: 0.3s;
+}
+
+.button2:hover{
+    box-shadow: 0 0 10px;
+}

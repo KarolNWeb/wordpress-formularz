@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf7H98bAAAAABlpGIm6n7BQQIFJZrZi02_FgxxX"></script>
+    <link rel="Stylesheet" href="./Style.css"/>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                if($("#radioWycena").prop("checked")){
+                    $("#wycena").fadeToggle();
+                }
+                else if($("#radioZapytanie").prop("checked")){
+                    $("#zapytanie").fadeToggle();
+                }
+            });
+        });
+        $(document).ready(function(){
+            $(".closeForm").click(function(){
+                $("#wycena").fadeOut();
+            })
+            $(".closeForm").click(function(){
+                $("#zapytanie").fadeOut();
+            })
+        });
+        </script>
+        <script>
+            grecaptcha.execute("key", {
+                action: "contact"
+            })
+            .then(function(token) {
+                document
+                .querySelectorAll(".recaptchaResponse")
+                .forEach(elem => (elem.value = token))
+                ;
+            });
+        </script>
+    <title>formularz</title>
+</head>
+<body>
+    <section>
+        <div class="row-cols-5 text-center">
+            <div class="col form-check-inline checbox">
+                <input class="form-check-input rounded mx-1" type="radio" name="kontakt" id="radioWycena">
+                <label class="form-check-label h4" for="radioWycena">
+                    Wycena
+                </label>
+            </div>
+            <div class="col form-check-inline">
+                <input class="form-check-input rounded mx-1" type="radio" name="kontakt" id="radioZapytanie">
+                <label class="form-check-label h4" for="radioZapytanie">
+                    Spotkanie
+                </label>
+            </div>
+            
+        </div>
+        <div class="row-cols-1">
+            <div class="col text-center">
+                <button class="btn-lg button1">Wypełnij</button>
+            </div>
+        </div>
+    </section>
+    <div class="forms">
+        <div class="form-content" id="wycena" style="display:none" >
+            <div class="closeForm">
+                <img id="close1" src="./images/close.png" alt="">
+            </div>
+            <div class="center align-content-center justify-content-center">
+                <form>
+                    <h1 class="my-5">Wycenimy realizację Twojego projektu. Przekaż nam kilka informacji.</h1>
+                    <div class="row p-3">
+                        <div class="col-md-4 col-xs-12">
+                            <h4>Interesuje mnie</h4>
+                            <div class="form-check m-1 my-4">
+                                <input class="form-check-input" type="checkbox" value="webpage" id="webpage">
+                                <label class="form-check-label" for="webpage">
+                                    Strona Internetowa
+                                </label>
+                            </div>
+                            <div class="form-check m-1 my-4">
+                                <input class="form-check-input" type="checkbox" value="webshop" id="webshop">
+                                <label class="form-check-label" for="webshop">
+                                    Sklep Internetowy
+                                </label>
+                            </div>
+                            <div class="form-check m-1 my-4">
+                                <input class="form-check-input" type="checkbox" value="app" id="app">
+                                <label class="form-check-label" for="app">
+                                    Aplikacja Mobilna
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col col-xs-12">
+                            <div class="col col-xs-12">
+                                <div class="mb-1">
+                                    <label for="ImieNazwisko" class="form-label"></label>
+                                    <input type="text" class="form-control border-0 p-3" id="ImieNazwisko" placeholder="Imię i Nazwisko">
+                                </div>
+                                <div class="mb-1">
+                                    <label for="telefon" class="form-label"></label>
+                                    <input type="tel" class="form-control border-0 p-3" id="ImieNazwisko" placeholder="Numer Telefonu" maxlength="12">
+                                </div>
+                                <div class="mb-1">
+                                    <label for="Email" class="form-label"></label>
+                                    <input type="email" class="form-control border-0 p-3" id="Email" placeholder="E-Mail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xs-12">
+                            <div class="col col-xs-12">
+                                <div class="mb-3">
+                                    <label for="opis"></label>
+                                    <textarea class="form-control border-0" id="opis" rows="7" placeholder="Napisz nam coś o swoim projekcie"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- koniec rowa -->
+                    <div class="form-check my-2">
+                        <input class="form-check-input" type="checkbox" id="accept">
+                        <label class="form-check-label" for="accept">
+                            Wyrażam zgodę na przetwarzanie moich danych osobowych w postaci imienia, nazwiska, adresu e-mail i nr tel. (jeżeli został podany), podanych w powyższym formularzu, zgodnie z przepisami rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), Dz. Urz. UE z 4.5.2016 r. L 119, str. 1), w celu udzielenia odpowiedzi na złożone zapytanie. Żądanie usunięcia danych proszę kierować na adres hello@webosta.net.
+                            <br><br>
+                            Informujemy, że: 1. Administratorem Pani/Pana danych osobowych jest firma Webosta Dawid Mądrzak, z siedzibą przy ul.  Partyzanckiej 28/11, 63-400 Ostrów Wielkopolski, e-mail: hello@webosta.net, tel.: +48 721 573 133. <a href="https://webosta.net/polityka-prywatnosci">Czytaj więcej</a>
+                        </label>
+                    </div>
+                    <div class="row-cols-1 my-4">
+                        <div class="col text-center">
+                            <button class="btn-lg button2">Wyślij</button>
+                            <input type="hidden" name="recaptcha_response" class="recaptchaResponse">
+                        </div>
+                    </div>
+                </form> <!-- koniec środka -->
+            </div>
+        </div> <!-- koniec formularza Wycena -->
+
+        <div class="form-content" id="zapytanie" style="display:none">
+            <div class="closeForm">
+                <img id="close2" src="./images/close.png" alt="">
+            </div>
+            <div class="center align-content-center justify-content-center">
+                <form>
+                    <h1 class="my-5">Spotkajmy się. Zasugeruj termin, zrobimy wszystko, żeby się dopasować.</h1>
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <div class="mb-1">
+                                <label for="TematykaSpotkania" class="form-label"></label>
+                                <input type="text" class="form-control border-0 p-3" id="TematykaSpotkania" placeholder="Tematyka Spotkania">
+                            </div>
+                            <div class="mb-1">
+                                <label for="ProponowanyTermin" class="form-label"></label>
+                                <input type="date" class="form-control border-0 p-3" id="ProponowanyTermin" placeholder="Proponowany Termin">
+                            </div>
+                        </div>
+                        <div class="col col-xs-12">
+                            <div class="col col-xs-12">
+                                <div class="mb-1">
+                                    <label for="ImieNazwisko" class="form-label"></label>
+                                    <input type="text" class="form-control border-0 p-3" id="ImieNazwisko" placeholder="Imię i Nazwisko">
+                                </div>
+                                <div class="mb-1">
+                                    <label for="telefon" class="form-label"></label>
+                                    <input type="tel" class="form-control border-0 p-3" id="Telefon" placeholder="Numer Telefonu" maxlength="12">
+                                </div>
+                                <div class="mb-1">
+                                    <label for="Email" class="form-label"></label>
+                                    <input type="email" class="form-control border-0 p-3" id="Email" placeholder="E-Mail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xs-12">
+                            <div class="col col-xs-12">
+                                <div class="mb-3">
+                                    <label for="opis"></label>
+                                    <textarea class="form-control border-0" id="opis" rows="7" placeholder="Napisz nam coś o swoim projekcie"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- koniec rowa -->
+                    <div class="form-check my-2">
+                        <input class="form-check-input" type="checkbox" id="accept2">
+                        <label class="form-check-label" for="accept2">
+                            Wyrażam zgodę na przetwarzanie moich danych osobowych w postaci imienia, nazwiska, adresu e-mail i nr tel. (jeżeli został podany), podanych w powyższym formularzu, zgodnie z przepisami rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), Dz. Urz. UE z 4.5.2016 r. L 119, str. 1), w celu udzielenia odpowiedzi na złożone zapytanie. Żądanie usunięcia danych proszę kierować na adres hello@webosta.net.
+                            <br><br>
+                            Informujemy, że: 1. Administratorem Pani/Pana danych osobowych jest firma Webosta Dawid Mądrzak, z siedzibą przy ul.  Partyzanckiej 28/11, 63-400 Ostrów Wielkopolski, e-mail: hello@webosta.net, tel.: +48 721 573 133. <a href="https://webosta.net/polityka-prywatnosci">Czytaj więcej</a>
+                        </label>
+                    </div>
+                    <div class="row-cols-1 my-4">
+                        <div class="col text-center">
+                            <button class="btn-lg button2">Wyślij</button>
+                            <input type="hidden" name="recaptcha_response" class="recaptchaResponse">
+                        </div>
+                    </div>
+                </form> <!-- koniec środka -->
+            </div>
+        </div> <!-- koniec formularza zapytanie -->
+    </div> <!-- koniec formularzy -->
+</body>
+</html>

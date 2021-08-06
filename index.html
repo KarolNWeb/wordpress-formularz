@@ -45,14 +45,14 @@
     <section>
         <div class="row-cols-5 text-center">
             <div class="col form-check-inline checbox">
-                <input class="form-check-input rounded mx-1" type="radio" name="kontakt" id="radioWycena">
-                <label class="form-check-label h4" for="radioWycena">
+                <input class="form-check-input rounded mx-1 align-baseline" type="radio" name="kontakt" id="radioWycena">
+                <label class="form-check-label h4 align-middle" for="radioWycena">
                     Wycena
                 </label>
             </div>
             <div class="col form-check-inline">
-                <input class="form-check-input rounded mx-1" type="radio" name="kontakt" id="radioZapytanie">
-                <label class="form-check-label h4" for="radioZapytanie">
+                <input class="form-check-input rounded mx-1 align-baseline" type="radio" name="kontakt" id="radioZapytanie">
+                <label class="form-check-label h4 align-middle" for="radioZapytanie">
                     Spotkanie
                 </label>
             </div>
@@ -67,7 +67,7 @@
     <div class="forms">
         <div class="form-content" id="wycena" style="display:none" >
             <div class="closeForm">
-                <img id="close1" src="./images/close.png" alt="">
+                <img src="./images/close.png" alt="">
             </div>
             <div class="center align-content-center justify-content-center">
                 <form>
@@ -124,12 +124,12 @@
                         <label class="form-check-label" for="accept">
                             Wyrażam zgodę na przetwarzanie moich danych osobowych w postaci imienia, nazwiska, adresu e-mail i nr tel. (jeżeli został podany), podanych w powyższym formularzu, zgodnie z przepisami rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), Dz. Urz. UE z 4.5.2016 r. L 119, str. 1), w celu udzielenia odpowiedzi na złożone zapytanie. Żądanie usunięcia danych proszę kierować na adres hello@webosta.net.
                             <br><br>
-                            Informujemy, że: 1. Administratorem Pani/Pana danych osobowych jest firma Webosta Dawid Mądrzak, z siedzibą przy ul.  Partyzanckiej 28/11, 63-400 Ostrów Wielkopolski, e-mail: hello@webosta.net, tel.: +48 721 573 133. <a href="https://webosta.net/polityka-prywatnosci">Czytaj więcej</a>
+                            Informujemy, że: 1. Administratorem Pani/Pana danych osobowych jest firma Webosta Dawid Mądrzak, z siedzibą przy ul.  Partyzanckiej 28/11, 63-400 Ostrów Wielkopolski, e-mail: hello@webosta.net, tel.: +48 721 573 133. <a href="https://webosta.net/polityka-prywatnosci" target="_blank">Czytaj więcej</a>
                         </label>
                     </div>
                     <div class="row-cols-1 my-4">
                         <div class="col text-center">
-                            <button class="btn-lg button2">Wyślij</button>
+                            <button class="btn-lg button2" type="submit">Wyślij</button>
                             <input type="hidden" name="recaptcha_response" class="recaptchaResponse">
                         </div>
                     </div>
@@ -139,7 +139,7 @@
 
         <div class="form-content" id="zapytanie" style="display:none">
             <div class="closeForm">
-                <img id="close2" src="./images/close.png" alt="">
+                <img src="./images/close.png" alt="">
             </div>
             <div class="center align-content-center justify-content-center">
                 <form>
@@ -152,7 +152,7 @@
                             </div>
                             <div class="mb-1">
                                 <label for="ProponowanyTermin" class="form-label"></label>
-                                <input type="date" class="form-control border-0 p-3" id="ProponowanyTermin" placeholder="Proponowany Termin">
+                                <input type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" class="form-control border-0 p-3" id="ProponowanyTermin" placeholder="Proponowany Termin">
                             </div>
                         </div>
                         <div class="col col-xs-12">
@@ -185,12 +185,12 @@
                         <label class="form-check-label" for="accept2">
                             Wyrażam zgodę na przetwarzanie moich danych osobowych w postaci imienia, nazwiska, adresu e-mail i nr tel. (jeżeli został podany), podanych w powyższym formularzu, zgodnie z przepisami rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), Dz. Urz. UE z 4.5.2016 r. L 119, str. 1), w celu udzielenia odpowiedzi na złożone zapytanie. Żądanie usunięcia danych proszę kierować na adres hello@webosta.net.
                             <br><br>
-                            Informujemy, że: 1. Administratorem Pani/Pana danych osobowych jest firma Webosta Dawid Mądrzak, z siedzibą przy ul.  Partyzanckiej 28/11, 63-400 Ostrów Wielkopolski, e-mail: hello@webosta.net, tel.: +48 721 573 133. <a href="https://webosta.net/polityka-prywatnosci">Czytaj więcej</a>
+                            Informujemy, że: 1. Administratorem Pani/Pana danych osobowych jest firma Webosta Dawid Mądrzak, z siedzibą przy ul.  Partyzanckiej 28/11, 63-400 Ostrów Wielkopolski, e-mail: hello@webosta.net, tel.: +48 721 573 133. <a href="https://webosta.net/polityka-prywatnosci" target="_blank">Czytaj więcej</a>
                         </label>
                     </div>
                     <div class="row-cols-1 my-4">
                         <div class="col text-center">
-                            <button class="btn-lg button2">Wyślij</button>
+                            <button class="btn-lg button2" type="submit">Wyślij</button>
                             <input type="hidden" name="recaptcha_response" class="recaptchaResponse">
                         </div>
                     </div>
